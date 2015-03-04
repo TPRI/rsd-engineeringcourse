@@ -64,6 +64,7 @@ def test_main_algorithm():
 
   mc = MonteCarlo(temperature=100.0, itermax=4)
 
+  # NOTE example of mocking
   # Patch mc so that it takes a pre-determined path through 
   acceptance = [True, True, False, True]
   mc.accept_change = Mock(side_effect=acceptance)
